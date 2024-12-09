@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MexicanConstitution.Mobile.Views.CustomSplashScreen"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+    Title="CustomSplashScreen"
+    BackgroundColor="Black"
+    NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout
+        Padding="0,0,0,0"
+        BackgroundColor="#000000"
+        HorizontalOptions="Center"
+        Spacing="0"
+        VerticalOptions="Center">
+        <Border
+            BackgroundColor="Black"
+            Stroke="Aqua"
+            StrokeShape="RoundRectangle 4">
+            <Border.Shadow>
+                <Shadow
+                    Opacity=".9"
+                    Radius="40"
+                    Offset="20,20" />
+            </Border.Shadow>
+            <skia:SKLottieView
+                HeightRequest="750"
+                HorizontalOptions="Center"
+                RepeatCount="2"
+                SemanticProperties.Description="Mosns the Rock!"
+                Source="moana_the_rock.json"
+                WidthRequest="500" />
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
