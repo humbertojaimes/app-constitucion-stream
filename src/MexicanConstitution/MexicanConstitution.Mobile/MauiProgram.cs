@@ -22,6 +22,8 @@ public static class MauiProgram
         //.NET 8 si requiere registrar las páginas
         //builder.Services.AddSingleton<ArticlesPage>();
         builder.Services.AddSingleton<ArticlesViewModel>();
+        builder.Services.AddSingleton<SplashViewModel>();
+        builder.Services.AddSingleton<SplashScreen>();
         builder.Services.AddSingleton<IConstitutionDataService, ConstitutionJsonService>();
 
 #if DEBUG

@@ -26,7 +26,7 @@
                 AnimationCompleted="SKLottieView_OnAnimationCompleted"
                 HeightRequest="750"
                 HorizontalOptions="Center"
-                RepeatCount="1"
+                RepeatCount="0"
                 SemanticProperties.Description="Mosns the Rock!"
                 Source="maui.json"
                 WidthRequest="500" />

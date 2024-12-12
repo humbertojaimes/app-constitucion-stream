@@ -10,20 +10,10 @@ public class ArticlesViewModel : BaseViewModel
     public ArticlesViewModel(IConstitutionDataService constitutionDataService)
     {
         Title = Titles.page_articles;
-        _constitutionDataService = constitutionDataService;
-        
+        ConstitutionTitles = new(constitutionDataService.Titles);
     }
     
-    public async Task OnInitializingAsync()
-    {
-        if (!IsBusy)
-        {
-            IsBusy = true;
-            var titles = await _constitutionDataService.GetTitlesAsync();
-            ConstitutionTitles = new (titles);
-            IsBusy = false;
-        }
-    }
+    
     
     private ObservableCollection<Title> _titles;
     public ObservableCollection<Title> ConstitutionTitles

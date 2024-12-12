@@ -1,10 +1,24 @@
+using MexicanConstitution.Mobile.Interfaces;
+
 namespace MexicanConstitution.Mobile.ViewModels;
 
 public class SplashViewModel : BaseViewModel
 {
-    public SplashViewModel()
+    private IConstitutionDataService _constitutionDataService;
+    public SplashViewModel(IConstitutionDataService constitutionDataService)
     {
         
+        _constitutionDataService = constitutionDataService;
+    }
+    
+    public async Task OnInitializingAsync()
+    {
+        if (!IsBusy)
+        {
+            IsBusy = true;
+            await _constitutionDataService.InitAsync();
+            IsBusy = false;
+        }
     }
     
 }

@@ -14,8 +14,5 @@ public partial class ArticlesPage : ContentPage
         BindingContext = viewModel;
     }
 
-    protected async override void OnAppearing()
-    {
-        (BindingContext as ArticlesViewModel)?.OnInitializingAsync();
-    }
+ 
 }
