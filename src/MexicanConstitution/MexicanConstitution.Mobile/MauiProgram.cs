@@ -2,6 +2,7 @@
 using MexicanConstitution.Mobile.Services;
 using MexicanConstitution.Mobile.Views;
 using Microsoft.Extensions.Logging;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace MexicanConstitution.Mobile;
 
@@ -12,6 +13,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseSkiaSharp()  //Luego de agregar el Nugget de Skia agregar esta linea para poder usarlo
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

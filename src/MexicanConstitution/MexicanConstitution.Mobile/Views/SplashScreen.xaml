@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             x:Class="MexicanConstitution.Mobile.Views.SplashScreen">
+    <VerticalStackLayout
+        Padding="0,0,0,0"
+        BackgroundColor="#000000"
+        HorizontalOptions="Center"
+        Spacing="0"
+        VerticalOptions="Center">
+        <Border
+            BackgroundColor="Black"
+            Stroke="Aqua"
+            StrokeShape="RoundRectangle 4">
+            <Border.Shadow>
+                <Shadow
+                    Opacity=".9"
+                    Radius="40"
+                    Offset="20,20" />
+            </Border.Shadow>
+            <skia:SKLottieView
+                AnimationCompleted="SKLottieView_OnAnimationCompleted"
+                HeightRequest="750"
+                HorizontalOptions="Center"
+                RepeatCount="1"
+                SemanticProperties.Description="Mosns the Rock!"
+                Source="maui.json"
+                WidthRequest="500" />
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
