@@ -21,4 +21,7 @@
     <data name="page_articles" xml:space="preserve">
         <value>Artículos</value>
     </data>
+    <data name="page_titles" xml:space="preserve">
+        <value>Títulos</value>
+    </data>
 </root>

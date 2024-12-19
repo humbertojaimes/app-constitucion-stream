@@ -5,12 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:MexicanConstitution.Mobile.Views"
     xmlns:resx="clr-namespace:MexicanConstitution.Mobile.ResxFiles"
-    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Disabled"
     Title="MexicanConstitution.Mobile">
 
     <ShellContent
-        Title="{x:Static resx:Titles.page_articles}"
-        ContentTemplate="{DataTemplate views:ArticlesPage}"
+        Title="{x:Static resx:PagesTitles.page_titles}"
+        ContentTemplate="{DataTemplate views:TitlesPage}"
         Route="ArticlesPage" />
 
 </Shell>

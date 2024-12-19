@@ -14,21 +14,21 @@ namespace MexicanConstitution.Mobile.ResxFiles {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Titles {
+    internal class PagesTitles {
         
         private static System.Resources.ResourceManager resourceMan;
         
         private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Titles() {
+        internal PagesTitles() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("MexicanConstitution.Mobile.ResxFiles.Titles", typeof(Titles).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("MexicanConstitution.Mobile.ResxFiles.PagesTitles", typeof(PagesTitles).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -48,6 +48,12 @@ namespace MexicanConstitution.Mobile.ResxFiles {
         internal static string page_articles {
             get {
                 return ResourceManager.GetString("page_articles", resourceCulture);
+            }
+        }
+        
+        internal static string page_titles {
+            get {
+                return ResourceManager.GetString("page_titles", resourceCulture);
             }
         }
     }

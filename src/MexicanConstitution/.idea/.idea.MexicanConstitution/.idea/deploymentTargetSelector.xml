@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="MexicanConstitution.Mobile">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-12-05T02:21:52.166939Z">
+        <DropdownSelection timestamp="2024-12-19T01:37:51.130169Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=/Users/hjr/.android/avd/Pixel_5_API_34.avd" />

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MexicanConstitution.Mobile.ViewModels"
+             xmlns:model="clr-namespace:MexicanConstitution.Mobile.Model"
+             x:DataType="vm:TitlesViewModel"
+             x:Class="MexicanConstitution.Mobile.Views.TitlesPage">
+    <Grid RowDefinitions="30, *, 50" Padding="20,5" RowSpacing="5">
+        <CollectionView Grid.Row="1" ItemsSource="{Binding ConstitutionTitles}"
+                        SelectionMode="Single"
+                       SelectedItem="{Binding SelectedTitle}" 
+                       SelectionChangedCommand="{Binding TitleSelectedCommand}"
+                       >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Title"
+                              >
+                    <Border 
+                        Padding="10"
+                        BackgroundColor="{StaticResource PrimaryDark}"
+                        HeightRequest="70">
+                        <VerticalStackLayout>
+                        <Label Text="{Binding Name}" 
+                               VerticalOptions="Center"
+                               TextColor="{StaticResource PrimaryDarkText}"
+                               FontSize="Medium"/>
+                        
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
