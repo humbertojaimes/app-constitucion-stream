@@ -8,13 +8,48 @@
              x:Class="MexicanConstitution.Mobile.Views.ArticlesPage"
              Title="{Binding Title}"
              >
+    <ContentPage.Resources>
+            <Color x:Key="ArticleBackground">#FF4F8AB9</Color>
+            <Color x:Key="ArticleText">White</Color>
+    </ContentPage.Resources>
+
     <Grid Padding="20">
-        <CollectionView ItemsSource="{Binding Chapters}" >
+        <CollectionView ItemsSource="{Binding Chapters}" 
+             IsGrouped="True" 
+             SelectionMode="Single"
+             SelectionChangedCommand="{Binding ArticleSelectedCommand}"
+             SelectedItem="{Binding Article,Mode=TwoWay}"
+             >
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate x:DataType="vm:ChapterViewModel">
+
+                    <Border BackgroundColor="{StaticResource Primary}" 
+                        Padding="5" 
+                        HeightRequest="50"
+                        >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="8"/>
+                        </Border.StrokeShape>
+                        <Label Text="{Binding Name}" 
+                            TextColor="{StaticResource PrimaryDarkText}"
+                            FontSize="Large"
+                            />
+                    </Border>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:Chapter" >
-                    <Label Text="{Binding Name}" />
+                <DataTemplate x:DataType="model:Article" >
+                    <Border Padding="20,0" BackgroundColor="{StaticResource ArticleBackground}">
+                        <Label Text="{Binding Name}" 
+                            FontAttributes="Bold"
+                            FontSize="Medium" 
+                            TextColor="{StaticResource ArticleText}" />
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
         </CollectionView>
     </Grid>
     

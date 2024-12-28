@@ -25,9 +25,8 @@
                 AnimationCompleted="SKLottieView_OnAnimationCompleted"
                 HeightRequest="750"
                 HorizontalOptions="Center"
-                RepeatCount="1"
-                SemanticProperties.Description="Mosns the Rock!"
-                Source="padrino.json"
+                SemanticProperties.Description="Maui!"
+                Source="maui.json"
                 WidthRequest="500" />
         </Border>
     </VerticalStackLayout>

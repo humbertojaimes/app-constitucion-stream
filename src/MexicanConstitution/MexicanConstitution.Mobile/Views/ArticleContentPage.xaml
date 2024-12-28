@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MexicanConstitution.Mobile.Views.ArticleContentPage"
+             xmlns:vm="clr-namespace:MexicanConstitution.Mobile.ViewModels"
+		     xmlns:model="clr-namespace:MexicanConstitution.Mobile.Model"
+			 x:DataType="vm:ArticleContentViewModel"
+             Title="{Binding Title}">
+    <ScrollView>
+        <StackLayout Padding="20" BindingContext="{Binding ArticleContent}" x:DataType="model:Article" >
+            <Label Text="{Binding Content}" FontSize="Medium" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

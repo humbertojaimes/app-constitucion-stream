@@ -6,8 +6,14 @@
              xmlns:model="clr-namespace:MexicanConstitution.Mobile.Model"
              x:DataType="vm:TitlesViewModel"
              x:Class="MexicanConstitution.Mobile.Views.TitlesPage">
-    <Grid RowDefinitions="30, *, 50" Padding="20,5" RowSpacing="5">
-        <CollectionView Grid.Row="1" ItemsSource="{Binding ConstitutionTitles}"
+    <Grid RowDefinitions="30,auto, *, 0" ColumnDefinitions="20,4*,*,20" Padding="0,5" RowSpacing="5">
+
+            
+        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Article}"  Placeholder="Ir al árticulo" HorizontalOptions="Fill"  />
+        <Button Grid.Row="1" Grid.Column="2" Text="Ir" Command="{Binding ArticleSelectedCommand}"  />
+
+
+        <CollectionView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  ItemsSource="{Binding ConstitutionTitles}"
                         SelectionMode="Single"
                        SelectedItem="{Binding SelectedTitle}" 
                        SelectionChangedCommand="{Binding TitleSelectedCommand}"

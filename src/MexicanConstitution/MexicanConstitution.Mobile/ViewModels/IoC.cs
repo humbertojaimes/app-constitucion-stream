@@ -7,6 +7,7 @@ public static class IoC
         services.AddTransient<SplashViewModel>();
         services.AddTransient<TitlesViewModel>();
         services.AddTransient<ArticlesViewModel>();
+        services.AddTransient<ArticleContentViewModel>();
         return services;
     }
 }
