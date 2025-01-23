@@ -61,6 +61,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.1" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0"/>
         <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="3.0.0-preview.13" />
@@ -114,6 +115,10 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Alerts_Titles.resx</DependentUpon>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MexicanConstitution.Models\MexicanConstitution.Models.csproj" />
     </ItemGroup>
 
 </Project>

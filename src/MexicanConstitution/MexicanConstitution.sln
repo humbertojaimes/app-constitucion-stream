@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanConstitution.Mobile", "MexicanConstitution.Mobile\MexicanConstitution.Mobile.csproj", "{3866C1FE-4FBB-4941-81B1-F07459CED321}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanConstitution.Api", "MexicanConstitution.Api\MexicanConstitution.Api.csproj", "{3D2EFF4D-929E-4020-84CB-AB8AA7F49032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MexicanConstitution.Models", "MexicanConstitution.Models\MexicanConstitution.Models.csproj", "{0D734B45-F3C7-40A2-AEC4-4472A7841F95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{3866C1FE-4FBB-4941-81B1-F07459CED321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3866C1FE-4FBB-4941-81B1-F07459CED321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3866C1FE-4FBB-4941-81B1-F07459CED321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2EFF4D-929E-4020-84CB-AB8AA7F49032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2EFF4D-929E-4020-84CB-AB8AA7F49032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2EFF4D-929E-4020-84CB-AB8AA7F49032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2EFF4D-929E-4020-84CB-AB8AA7F49032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D734B45-F3C7-40A2-AEC4-4472A7841F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D734B45-F3C7-40A2-AEC4-4472A7841F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D734B45-F3C7-40A2-AEC4-4472A7841F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D734B45-F3C7-40A2-AEC4-4472A7841F95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

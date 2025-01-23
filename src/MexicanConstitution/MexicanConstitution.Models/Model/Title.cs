@@ -1,4 +1,4 @@
-namespace MexicanConstitution.Mobile.Model;
+namespace MexicanConstitution.Model;
 
 public class Title 
 {

@@ -1,5 +1,6 @@
 ﻿using MexicanConstitution.Mobile.Interfaces;
 using MexicanConstitution.Mobile.Services;
+using MexicanConstitution.Mobile.Services.RestClients;
 using MexicanConstitution.Mobile.Views;
 using Microsoft.Extensions.Logging;
 using SkiaSharp.Views.Maui.Controls.Hosting;
@@ -24,7 +25,9 @@ public static class MauiProgram
         builder.Services.AddViewModels();
         builder.Services.AddSingleton<SplashScreen>();
         builder.Services.AddSingleton<IConstitutionDataService, ConstitutionJsonService>();
-
+        string constitutionApi = $"https://cbe9-2806-107e-1b-c722-f8c5-b354-373-30f2.ngrok-free.app/constitution/titles";
+        builder.Services.AddHttpClient<ConstitutionRestClient>
+            (client => client.BaseAddress = new Uri(constitutionApi));
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:MexicanConstitution.Mobile.ViewModels"
-             xmlns:model="clr-namespace:MexicanConstitution.Mobile.Model"
+             xmlns:model="clr-namespace:MexicanConstitution.Model;assembly=MexicanConstitution.Models"
              xmlns:res="clr-namespace:MexicanConstitution.Mobile.ResxFiles"
              x:DataType="vm:TitlesViewModel"
              x:Class="MexicanConstitution.Mobile.Views.TitlesPage">
