@@ -39,8 +39,9 @@
             </CollectionView.GroupHeaderTemplate>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Article" >
-                    <Border Padding="20,0" BackgroundColor="{StaticResource ArticleBackground}">
+                    <Border Padding="20,0" HeightRequest="35" BackgroundColor="{StaticResource ArticleBackground}">
                         <Label Text="{Binding Name}" 
+                            VerticalOptions="Center"
                             FontAttributes="Bold"
                             FontSize="Medium" 
                             TextColor="{StaticResource ArticleText}" />

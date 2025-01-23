@@ -57,28 +57,42 @@ public class TitlesViewModel : BaseViewModel
 
     private async Task OnArticleSelected()
     {
-        if (string.IsNullOrWhiteSpace(Article))
-            return;
-        else
+        try
         {
-            var articleContent = _constitutionDataService.Titles
-                                    .SelectMany(t => t.Chapters)
-                                    .SelectMany(c => c.Articles)
-                                    .FirstOrDefault(a => a.Name.Trim().Equals(Article));
-
-            if (articleContent is not null)
+            if (string.IsNullOrWhiteSpace(Article) || !int.TryParse(Article, out int articleNumber))
             {
-                var parameters = new Dictionary<string, object>
-                {
-                    { ARTICLE_CONTENT_PARAM, articleContent }
-                };
-
-                await Shell.Current.GoToAsync($"{ARTICLE_CONTENT}",parameters);
-                articleContent = null;
+                await Shell.Current.DisplayAlert(AlertsTitles.Article_Error, ErrorMessages.Article_Number_Error, ButtonsMessages.Alert_Cancel);
             }
+            else
+            {
+                if (articleNumber is < 1 or > 136)
+                {
+                    await Shell.Current.DisplayAlert(AlertsTitles.Article_Error, ErrorMessages.Article_Number_Error, ButtonsMessages.Alert_Cancel);
+                    return;
+                }
 
-            
+                var articleContent = _constitutionDataService.Titles
+                    .SelectMany(t => t.Chapters)
+                    .SelectMany(c => c.Articles)
+                    .FirstOrDefault(a => a.Id == articleNumber);
+
+                if (articleContent is not null)
+                {
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { ARTICLE_CONTENT_PARAM, articleContent }
+                    };
+
+                    await Shell.Current.GoToAsync($"{ARTICLE_CONTENT}", parameters);
+                    articleContent = null;
+                    Article = string.Empty;
+                }
+            }
+        } 
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
         }
-    }
-    
+    } 
+
 }

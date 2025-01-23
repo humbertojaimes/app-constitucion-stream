@@ -4,12 +4,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:MexicanConstitution.Mobile.ViewModels"
              xmlns:model="clr-namespace:MexicanConstitution.Mobile.Model"
+             xmlns:res="clr-namespace:MexicanConstitution.Mobile.ResxFiles"
              x:DataType="vm:TitlesViewModel"
              x:Class="MexicanConstitution.Mobile.Views.TitlesPage">
     <Grid RowDefinitions="30,auto, *, 0" ColumnDefinitions="20,4*,*,20" Padding="0,5" RowSpacing="5">
 
             
-        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Article}"  Placeholder="Ir al árticulo" HorizontalOptions="Fill"  />
+        <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Article}"  Placeholder="{x:Static res:ButtonsMessages.Article_Go}" HorizontalOptions="Fill"  />
         <Button Grid.Row="1" Grid.Column="2" Text="Ir" Command="{Binding ArticleSelectedCommand}"  />
 
 
